@@ -1,0 +1,2 @@
+Ajax=Asynchronous javascript and xml
+Ajax是一种在无需重新加载整个网页的情况下,能够更新部分网页的技术

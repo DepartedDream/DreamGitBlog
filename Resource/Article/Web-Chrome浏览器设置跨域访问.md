@@ -1,0 +1,1 @@
+--args --disable-web-security --user-data-dir="C:/ChromeDevSession"

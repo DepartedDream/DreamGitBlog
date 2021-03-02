@@ -1,0 +1,33 @@
+| 服务          | 端口号 |
+| ------------- | ------ |
+| HTTP          | 80     |
+| HTTPS         | 443    |
+| FTP           | 21/20  |
+| MySQL         | 3306   |
+| squid         | 3128   |
+| rsync         | 873    |
+| Telnet        | 23     |
+| DNS           | 53     |
+| DHCP          | 67/68  |
+| sshd          | 22     |
+| nginx         | 80     |
+| Tomcat        | 8080   |
+| sqlserver     | 1433   |
+| Oracle        | 1521   |
+| SMTP          | 25     |
+| Metagram      | 99     |
+| Netqork       | 119    |
+| SNMP          | 161    |
+| LDAP/ILS      | 389    |
+| DSF           | 55     |
+| mountd        | 635    |
+| sftp          | 115    |
+| IMAP          | 993    |
+| tftp          | 69     |
+| NFS           | 2049   |
+| zabbix server | 10051  |
+| zabbix agent  | 10050  |
+| DNS           | 53     |
+| NTP           | 123    |
+| Redis         | 6379   |
+| MongoDB       | 27017  |

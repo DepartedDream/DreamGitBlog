@@ -1,0 +1,25 @@
+按键|用途
+--|--
+win+E|资源管理器
+win+方向键|控制获取焦点窗口的位置
+Alt+Tab|切换窗口
+win+Tab|任务视图
+Ctrl+Shift+Esc|打开任务管理器。
+Windows键+R|打开“运行”对话框。
+Shift+Delete|彻底删除文件
+SHIFT+END|跳到当前行文本末尾
+Win+,|暂时隐藏窗口以显示桌面。
+Win+D|最小化所有窗口并转到桌面。
+Win+E|打开资源管理器
+Windows键+R|打开“运行”对话框。
+Win+L|锁定桌面
+Win+任意数字键|从任务栏打开应用程序。
+Win+Space|切换输入语言和键盘。
+Win+PrtScr|获取桌面的屏幕截图并将其保存到图片文件夹。
+Win+Ctrl+D|创建新的虚拟桌面
+Win+Ctrl+F4|关闭当前虚拟桌面
+Win+Ctrl +左/右|切换虚拟桌面
+Ctrl+C|复制所选文本。
+Ctrl+V|粘贴选中的文本。
+Ctrl+A|选中光标提示符后的所有文本。
+Alt+F4|关闭当前窗口

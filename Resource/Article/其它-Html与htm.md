@@ -1,0 +1,2 @@
+# Htm
+Htm源于古老的8.3文件格式，DOS操作系统下只能支持长度为3的后缀名，所以是htm,但在windows下无所谓html和htm，所以htm是为了兼容DOS命名格式存在的
