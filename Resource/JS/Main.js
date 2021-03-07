@@ -18,6 +18,7 @@
     })
     scrollArticleTypeList();
     scrollArticleOutline();
+
 })
 
 function initialMusicPlayer()
@@ -34,7 +35,6 @@ function initialMusicPlayer()
 
 function initialArticleList(articleType)
 {
-
     var articleList=$("#article_list");
     var articleCollection=$(".article");
     var articleTypeCollection=$(".article_type");
@@ -73,8 +73,10 @@ function initialArticleContent(article)
     for (var i = 0; i < codes.length; i++) {
         hljs.highlightBlock(codes[i]);
     }
+    $("img").attr("src",`Resource//Article//${$("img").attr("src")}`);
     articleContent.css("height","");
     articleContent.height(articleContent.height()+80);
+    console.log(articleContent.css("height"));
 }
 
 function initialArticleOutline()
@@ -122,10 +124,6 @@ function clearArticleOutline()
 
 function scrollArticleTypeList()
 {
-    // $(window).scroll(function()
-    // {
-    //     $("#article_type_list").scrollTop($(window).scrollTop());
-    // })
     $(window).scroll(function()
     {
         $("#article_type_list").css("margin-top",$(window).scrollTop());

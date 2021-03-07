@@ -31,10 +31,12 @@
     color: white;
 }
 /*md图片样式*/
-#article_content > img
+#article_content img
 {
     width: 100%;
     height: 100%;
+    object-fit:cover;
+    display: block;
 }
 /*md无序列表样式*/
 #article_content > ul
