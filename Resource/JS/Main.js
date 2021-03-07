@@ -76,7 +76,6 @@ function initialArticleContent(article)
     $("img").attr("src",`Resource//Article//${$("img").attr("src")}`);
     articleContent.css("height","");
     articleContent.height(articleContent.height()+80);
-    console.log(articleContent.css("height"));
 }
 
 function initialArticleOutline()
