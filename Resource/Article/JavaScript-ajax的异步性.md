@@ -28,7 +28,6 @@ function initialTable(typeName, groupNum, tHeadArray) {
         }
     }, "json");
     console.log(1);
-    console.log(tBodyHtml)
     $("#ddTable").html(`<table>${tHeadHtml}${tBodyHtml}<table>`);
 }
 ```

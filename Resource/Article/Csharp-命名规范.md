@@ -29,6 +29,7 @@ sender参数代表提出事件的对象，sender参数永远是一个类型对�
 - 接口名称应该为名词及名词短语或者描述其行为的形容词，尽可能使用完整的词. (Example IComponent or IEnumberable)
 - 使用Pascal规则
 - 使用字符I为前缀，并紧跟一个大写字母（即接口名的第一个字母大写）
+
 ```
 interface ICompare
 {

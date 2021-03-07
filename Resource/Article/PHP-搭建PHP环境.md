@@ -54,6 +54,8 @@ D:\软件\php7\ext
 
 # 环境包
 
+如果觉得上述过程繁杂，可以直接使用以下环境包。
+
 [PHPStudy（小皮）V8.1](https://www.xp.cn/download.html)
 
 # 参考

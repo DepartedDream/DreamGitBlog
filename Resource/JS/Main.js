@@ -1,46 +1,141 @@
 ﻿$(document).ready(function()
 {
-    var ddMusicPlayer=new DdMusicPlayer();
-    ddMusicPlayer.initialDdMusicPlayer();
-    $("#music_list").html($("#music_list_data").html());
-    $("#music_list_data").remove();
-    $($(".article_type")[0]).css({"color":"black","background-color":"white"});
-
-    $(".article").on("click",function()
+    var articleTypeCollection=$(".article_type");
+    var articleCollection=$(".article");
+    initialMusicPlayer();
+    initialArticleList($(articleTypeCollection[0]));
+    articleCollection.on("click",function()
     {
-        
-        $("#article_list").hide();
-        $("#article_content").show();
-        $("#article_content").html(marked(decodeURIComponent($(this).attr("article_content"))));
-        var codes = $("code");
-        for (var i = 0; i <= codes.length; i++) {
-            hljs.highlightBlock(codes[i]);
-        }
+        hideArticleList()
+        initialArticleContent($(this));
+        initialArticleOutline();
     })
-
-    $(".article_type").on("click",function()
+    articleTypeCollection.on("click",function()
     {
-        $(".article_type").removeAttr("style");
-        $(this).css({"color":"black","background-color":"white"});
-        $("#article_content").hide();
-        $("#article_list").show();
-        if($(this).text()=="All")
+        initialArticleList($(this));
+        hideArticleContent();
+        clearArticleOutline();
+    })
+    scrollArticleTypeList();
+    scrollArticleOutline();
+})
+
+function initialMusicPlayer()
+{
+    var ddMusicPlayer=new DdMusicPlayer();
+    ddMusicPlayer.initialPlayerHtml(ddMusicPlayer);
+    var musicList=$("#music_list");
+    var musicListData=$("#music_list_data");
+    musicList.html(musicListData.html());
+    musicListData.remove();
+    ddMusicPlayer.loadDefaultSetting(ddMusicPlayer);
+    ddMusicPlayer.loadPlayerEvent(ddMusicPlayer);
+}
+
+function initialArticleList(articleType)
+{
+
+    var articleList=$("#article_list");
+    var articleCollection=$(".article");
+    var articleTypeCollection=$(".article_type");
+    articleList.show();
+    articleTypeCollection.removeAttr("style");
+    articleType.css({"color":"black","background-color":"white"});
+    if(articleType.text()=="全部")
+    {
+        articleCollection.show();
+    }
+    else
+    {
+        for(var i=0;i<articleCollection.length;i++)
         {
-            $(".article").show();
-        }
-        else
-        {
-            for(var i=0;i<$(".article").length;i++)
+            if(articleType.text()==$(articleCollection[i]).attr("article_type"))
             {
-                if($(this).text()==$($(".article")[i]).attr("article_type"))
-                {
-                    $($(".article")[i]).show();
-                }
-                else
-                {
-                    $($(".article")[i]).hide();
-                }
+                $(articleCollection[i]).show();
+            }
+            else
+            {
+                $(articleCollection[i]).hide();
+            }
+        }
+    }
+    articleList.css("height","");
+    articleList.height(articleList.height()+80);
+}
+
+function initialArticleContent(article)
+{
+
+    var articleContent=$("#article_content");
+    articleContent.show();
+    articleContent.html(marked(decodeURIComponent(article.attr("article_content"))));
+    var codes = $("code");
+    for (var i = 0; i < codes.length; i++) {
+        hljs.highlightBlock(codes[i]);
+    }
+    articleContent.css("height","");
+    articleContent.height(articleContent.height()+80);
+}
+
+function initialArticleOutline()
+{
+    var articleOutline=$("#article_outline_list");
+    var articleContent=$("#article_content");
+    articleOutline.html("");
+    var headerCollection=articleContent.children(":header");
+    for(var i=0;i<headerCollection.length;i++)
+    {
+        articleOutline.html(articleOutline.html()+$(headerCollection[i]).prop("outerHTML"));
+    }
+    var outlineCollection=$("#article_outline_list").children();
+    $(outlineCollection).removeAttr("id");
+    $(outlineCollection).attr("class","article_outline");
+    $(outlineCollection).on("click",function()
+    {
+        for(var i=0;i<headerCollection.length;i++)
+        {
+            if($(headerCollection[i]).text()==$(this).text())
+            {
+                $("html,body").animate({scrollTop:$(headerCollection[i]).offset().top},500);
             }
         }
     })
-})
+}
+
+function hideArticleList()
+{
+    var articleList=$("#article_list");
+    articleList.hide();
+}
+
+function hideArticleContent()
+{
+    var articleContent=$("#article_content");
+    articleContent.hide();
+}
+
+function clearArticleOutline()
+{
+    var articleOutline=$("#article_outline_list");
+    articleOutline.html("");
+}
+
+function scrollArticleTypeList()
+{
+    // $(window).scroll(function()
+    // {
+    //     $("#article_type_list").scrollTop($(window).scrollTop());
+    // })
+    $(window).scroll(function()
+    {
+        $("#article_type_list").css("margin-top",$(window).scrollTop());
+    })
+}
+
+function scrollArticleOutline()
+{
+    $(window).scroll(function()
+    {
+        $("#article_outline_list").css("margin-top",$(window).scrollTop());
+    })
+}

@@ -2,7 +2,7 @@
 
 * 登录Oracle官网
 
-[Oracle官网](https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=orcale&oq=java%25E5%25AE%2589%25E8%25A3%2585&rsv_pq=bdfb4d4a000169c8&rsv_t=e2fclUTa6Aqm%2FyD4a0pzDagWc7kIW52s3v2%2BvXgD0efvExvx%2B50M5QBpSSk&rqlang=cn&rsv_enter=1&rsv_dl=tb&rsv_sug3=7&rsv_sug1=7&rsv_sug7=101&rsv_sug2=0&rsv_btype=t&inputT=1714&rsv_sug4=1714)
+[Oracle官网](https://www.oracle.com/index.html)
 
 * 在官网产品界面找到JDK的下载位置,点击下载
 

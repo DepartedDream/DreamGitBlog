@@ -1,8 +1,12 @@
 # WPF ResourceDictionary的使用
+
 作用：一个应用程序中，某个窗口需要使用样式，但是样式非常多，写在一个窗口中代码分类不方便。最好Style写在专门的xaml文件中，然后引用到窗口中，就像HTML引用外部css文件一样。
 初衷：就在于可以实现多个项目之间的共享资源，资源字典只是一个简单的XAML文档，该文档除了存储希望使用的资源之外，不做任何其它的事情。
+
 ## 创建资源字典
+
 创建资源字典的过程比较简单，只是将需要使用的资源全都包含在一个xaml文件之中即可。如下面的例子（文件名test.xaml，与后面的app.xaml文件中的内容相对应）：
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 
@@ -22,10 +26,14 @@
 
 </ResourceDictionary>
 ```
+
 说明：在创建资源的时候要确保资源文件的编译选项为page，这样就能够保证XAML资源文件最终能够编译为baml文件。但是如果设置为Resource也是一个不错的选择，这样它能够嵌入到程序集中，但是不被编译，当然其解析的速度回稍微慢一点。
 ## 使用资源字典
+
 ### 集成资源
+
 要是用资源字典，首先要将资源字典集成到应用程序的某些资源集合中。一般的做法都是在app.xaml文件中进行集成。代码如下：
+
 ```xml
     <ResourceDictionary>
 
@@ -37,8 +45,11 @@
 
         </ResourceDictionary>
 ```
+
 ### 使用资源
+
 集成之后就可以在当前的工程中使用这些资源了。使用方法如下：
+
 ```xml
 <Window x:Class="HelloWpf.MainWindow"
 
@@ -74,9 +85,13 @@
 
 </Window>
 ```
+
 使用资源的方法比较简单只需要使用StaticResource 关键字去添加即可。
+
 ## 内部集成
+
 或者内部集成在窗口中引用外部资源，注意：在Window中添加外部样式需要指定key，而Application中则不需要，所以这里FadeBrush就是引用外部样式test.xaml的key
+
 ```xml
 <Window x:Class="MSSQLDocCreator.MainWindow"  
 
@@ -106,17 +121,21 @@
 
       </Window>  
 ```
+
 将样式应用到窗口的布局上
+
 ```xml
     <Grid Resources="{StaticResource rdStyle}">   
 
     </Grid>   
 ```
-## 总结：
+
+## 总结
 使用资源字典的主要原因有两个：
 a. 提供皮肤功能。
 b. 存储需要被本地话的内容（错误消息字符串等，实现软编码）
 使用过程也比较简单，归纳起来主要有下面几个步骤：
+
 1. 创建资源字典文件
 2. 资源字典集成
 3. 使用字典中的资源

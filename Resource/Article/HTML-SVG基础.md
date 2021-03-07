@@ -5,6 +5,7 @@
 * SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失
 * SVG 是万维网联盟的标准
 * SVG 与诸如 DOM 和 XSL 之类的 W3C 标准是一个整体lable Vector Graphics）
+
 # 使用SVG的方法
 ## HTML内部引用
 ```
@@ -109,10 +110,23 @@ T|smooth quadratic Bézier curveto光滑二次贝塞尔曲线到|(x y)+
 A|elliptical Arc椭圆弧|(rx ry x-axis-rotation large-arc-flag sweep-flag x y)+
 Z|closepath|闭合路径，形成封闭图形。
 注意：以上所有命令均允许小写字母。大写表示绝对定位，小写表示相对定位。
-## SVG
+
 # SVG的css属性
+
 * fill填充颜色 默认为黑色
 * stroke 笔触颜色 默认为黑色
 * stroke-width 笔触宽度 默认为黑色
+
 # SVG的dom属性
 * viewbox截取画布的范围 (源点x,源点y,长度,宽度)
+
+# 如何将SVG进行缩放
+```
+<svg width="200" height="200" viewbox="0 0 100 100"></svg>
+```
+* viewbox 前两个坐标表示画布的左上角定点的横坐标和纵坐标
+* 后两个坐标表示显示你画布的范围
+
+例:假如你从左上角画一条path d="M 0 0 L 200 0"的线,向上的viewbox只能显示这条线的一半
+
+* width,height会将画布放大到你指定的大小

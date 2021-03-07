@@ -110,6 +110,7 @@ enable-migrations   //为项目启动数据库迁移，执行成功后回生成M
 add-migration 迁移类名   //为某个类搭建基架，会在Migrations文件夹中生成对应的迁移文件，更新后可删除
 update-database     //更新数据库
 ```
+
 # LINQ介绍
 
 语言集成查询 (LINQ) 是一系列直接将查询功能集成到 C# 语言的技术统称。LINQ 系列技术提供了针对对象 (LINQ to Objects)、关系数据库 (LINQ to SQL) 和 XML (LINQ to XML) 的一致查询体验。

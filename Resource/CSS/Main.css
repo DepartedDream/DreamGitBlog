@@ -32,60 +32,121 @@ body
     cursor: default;
 }
 
-#main_contain
+#center_content
 {
-    width: 50vw;
-    height:auto;
-    overflow-x: hidden;
-    margin: 0 auto 0 auto;
+    width:80vw;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
 }
 
-#main_contain>#article_type_list
+#article_type_list
 {
     width: 120px;
     height: auto;
-    position: fixed;
     border-radius: 10px;
     display: flex;
+    margin-right:50px;
+    flex-shrink: 1;
     flex-direction:column;
     justify-content: flex-start;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: rgba(255, 255, 255, 0.1);
-    /*background-image:url(../Image/Nier.png);*/
 }
-
-#main_contain>#article_type_list>.article_type
+#article_type_list>.article_type
 {
     width:120px;
     height: auto;
     line-height: 25px;
     font-size: 20px;
     color:#757575;
-    /*text-shadow: 1px 1px 0 white, 
-    1px -1px 0 white, -1px -1px 0 white, 
-    -1px 1px 0 white;*/
     text-align:center;
     cursor:pointer;
 }
-
-#main_contain>#article_type_list>.article_type:hover {
+#article_type_list>.article_type:hover {
     color: black;
     background-color: white;
 }
 
-#main_contain>#article_content,
-#main_contain>#article_list
+#article_outline_list
 {
-    width: 40vw;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    margin-left:50px;
+    flex-shrink: 1;
+    flex-direction:column;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0,0.8);
+}
+#article_outline_list>.article_outline
+{
+    width:200px;
+    height: auto;
+    color:white;
+    cursor:pointer;
+    word-break:break-all;
+}
+#article_outline_list>.article_outline:active
+{
+    color:black;
+}
+#article_outline_list>h1
+{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight:bolder;
+    text-align:center;
+}
+#article_outline_list>h2
+{
+    font-size: 15px;
+    line-height: 15px;
+    text-align:left;
+    font-weight:lighter;
+}
+#article_outline_list>h3
+{
+    font-size: 10px;
+    line-height: 10px;
+    text-align:center;
+    font-weight:lighter;
+    text-decoration:underline;
+}
+#article_outline_list>h4
+{
+    display: none;
+}
+#article_outline_list>h5
+{
+    display: none;
+}
+#article_outline_list>h6
+{
+    display: none;
+}
+
+#article_content,
+#article_list
+{
+    width: 30vw;
     height: auto;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin: 0 auto 0 200px;
+}
+#article_content
+{
+    display: none;
 }
 
-#main_contain>#article_list>.article
+#article_space
+{
+    height: 80px;
+}
+
+#article_list>.article
 {
     margin: auto;
     width:50vw;
@@ -99,15 +160,6 @@ body
     color:#757575;
     cursor:pointer;
 }
-
-#main_contain>#article_list>.article:hover {
+#article_list>.article:hover {
     color: white;
-}
-
-#main_contain>#article_space
-{
-    width: 100%;
-    height: 80px;
-    margin: auto;
-    bottom:0;
 }

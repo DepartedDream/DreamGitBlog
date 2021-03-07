@@ -19,8 +19,9 @@
     this.singleBtn = function(){return $("#single_btn");};
     this.loopBtn = function(){return $("#loop_btn");};
     this.randomBtn = function(){return $("#random_btn");};
+    this.musicList = function(){return $("#music_list");};
     this.musicListBtn = function(){return $("#music_list_btn");};
-    this.musicList=function(){return $(".music");};
+    this.musicCollection=function(){return $(".music");};
     this.currentMusic=function(){};
     this.lyricTime = new Array();//当前歌词时间数组
     this.lyricText = new Array();//当前歌词文本数组
@@ -35,9 +36,9 @@
     };
 
     this.changeMusicById = function (player, musicId) {
-        player.currentMusic=function(){return $(player.musicList()[Number(musicId) - 1]);}
+        player.currentMusic=function(){return $(player.musicCollection()[Number(musicId) - 1]);}
         player.bgm().attr("src",player.currentMusic().attr("music_path"))
-        player.musicList().removeAttr("style");
+        player.musicCollection().removeAttr("style");
         player.currentMusic().css("color", "#FAFAFA");
 
         var lyricPath = player.currentMusic().attr("music_lyric_path");
@@ -69,9 +70,9 @@
 
     /*通过歌曲名称更改歌曲*/
     this.changeMusicByName = function (player, musicName) {
-        for (var i = 0; i < player.musicList().length; i++) {
-            if ($(player.musicList()[i]).text() == musicName) {
-                var musicId = $(player.musicList()[i]).attr("music_id");
+        for (var i = 0; i < player.musicCollection().length; i++) {
+            if ($(player.musicCollection()[i]).text() == musicName) {
+                var musicId = $(player.musicCollection()[i]).attr("music_id");
                 player.changeMusicById(player, musicId);
                 break;
             }
@@ -91,7 +92,6 @@
             player.bgm()[0].muted = false;
             player.bgm()[0].volume=targetVolume;
             player.tvBar().attr("width","");
-            console.log(player.bvBar().css("width"));
             player.tvBar().width(Number(player.bgm()[0].volume) * Number(player.bvBar().width()));
         }
     };
@@ -131,7 +131,7 @@
             player.bgm().off("ended");
             player.bgm().on("ended", function () {
                 var nextmusicId = Number(player.currentMusic().attr("music_id")) + 1;
-                if (nextmusicId > player.musicList().length) {
+                if (nextmusicId > player.musicCollection().length) {
                     nextmusicId = 1;
                 }
                 player.changeMusicById(player,nextmusicId);
@@ -144,7 +144,7 @@
             player.randomBtn().show();
             player.bgm().off("ended");
             player.bgm().on("ended", function randomPlay() {
-                var preMusicId = Math.floor(Math.random() * player.musicList().length + 1);
+                var preMusicId = Math.floor(Math.random() * player.musicCollection().length + 1);
                 player.changeMusicById(player,preMusicId);
                 player.bgm()[0].play();
             });
@@ -227,7 +227,7 @@
         var musicPlayerController = `<div id="player_controller">${preBtnHtml}${pauseBtnHtml}${playBtnHtml}${nextBtnHtml}
         ${bottomProgressBarHtml}${soundBtnHtml}${muteBtnHtml}${bottomVolumeBarHtml}${singleplayBtnHtml}${loopplayBtnHtml}
         ${randomplayBtnHtml}${musicListBtnHtml}</div>`;
-        var musicListHtml = "<div id=\"music_list\"></div>";
+        var musicListHtml = "<div id=\"music_list\" style=\"display:none;\"></div>";
         var musicPlayerHtml = audioHtml + lyricHtml + musicPlayerController + musicListHtml;
         player.playerJqObj().html(musicPlayerHtml);
     }
@@ -244,11 +244,11 @@
             if (player.playOrder!= "random") {
                 var id = Number(player.currentMusic().attr("music_id")) - 1;
                 if (id <= 0) {
-                    id = player.musicList().length;
+                    id = player.musicCollection().length;
                 }
             }
             else {
-                var id = Math.floor(Math.random() * musicList.length + 1);
+                var id = Math.floor(Math.random() * musicCollection.length + 1);
             }
             player.changeMusicById(player,id);
             player.changePlayState(player,"play");
@@ -256,12 +256,12 @@
         player.nextBtn().on("click", function () {
             if (player.Order!= "random") {
                 var id =Number(player.currentMusic().attr("music_id"))+1;
-                if (id > player.musicList().length) {
+                if (id > player.musicCollection().length) {
                     id = 1;
                 }
             }
             else {
-                var id = Math.floor(Math.random() * player.musicList().length + 1);
+                var id = Math.floor(Math.random() * player.musicCollection().length + 1);
             }
             player.changeMusicById(player,id);
             player.changePlayState(player,"play");
@@ -275,12 +275,9 @@
         player.randomBtn().on("click", function () {
             player.changePlayOrder(player, "single")
         });
-        player.musicList().on("click", function () {
-            var id = player.attr("music_id");
-            player.changeMusicById(id);
-            player.bgm()[0].play();
-            player.pauseBtn().show();
-            player.playBtn().hide();
+        player.musicCollection().on("click", function () {
+            player.changeMusicById(player,$(this).attr("music_id"));
+            player.changePlayState(player,"play");
         });
         player.musicListBtn().on("click", function () {
             player.musicList().toggle();
