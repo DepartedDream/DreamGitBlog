@@ -68,7 +68,7 @@ function initialArticleContent(article)
 
     var articleContent=$("#article_content");
     articleContent.show();
-    articleContent.html(marked(decodeURIComponent(article.attr("article_content"))));
+    articleContent.html(marked(decodeURI(article.attr("article_content"))));
     var codes = $("code");
     for (var i = 0; i < codes.length; i++) {
         hljs.highlightBlock(codes[i]);

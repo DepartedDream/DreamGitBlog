@@ -1,112 +1,52 @@
 # 文字的水平居中
 
-将一段文字置于容器的水平中点，只要设置text-align属性即可：
 ```css
-　　text-align:center;
+　　.div
+    {
+        text-align:center;
+    }
 ```
-2. 容器的水平居中
 
-先为该容器设置一个明确宽度，然后将margin的水平值设为auto即可。
+# 文字的垂直居中
 
-　　div#container {
-　　　　width:760px;
+* 将行间距和height设置相同的值即可
+
+```css
+　　.div{
+　　　　height:100px;
+       line-height:100px;
 　　　　margin:0 auto;
 　　}
+```
 
-3. 文字的垂直居中
+# 侧边栏随窗体移动
 
-单行文字的垂直居中，只要将行高与容器高设为相等即可。
+# 图片宽度的自适应
 
-比如，容器中有一行数字。
 
-　　<div id="container">1234567890</div>
+# 3D按钮
 
-然后CSS这样写：
+* 要使按钮具有3D效果，只要将它的左上部边框设为浅色，右下部边框设为深色即可。
 
-　　div#container {height: 35px; line-height: 35px;}
-
-如果有n行文字，那么将行高设为容器高度的n分之一即可。
-
-4. 容器的垂直居中
-
-比如，有一大一小两个容器，请问如何将小容器垂直居中？
-
-　　<div id="big">
-　　　　<div id="small">
-　　　　</div>
-　　</div>
-
-首先，将大容器的定位为relative。
-
-　　div#big{
-　　　　position:relative;
-　　　　height:480px;
-　　}
-
-然后，将小容器定位为absolute，再将它的左上角沿y轴下移50%，最后将它margin-top上移本身高度的50%即可。
-
-　　div#small {
-　　　　position: absolute;
-　　　　top: 50%;
-　　　　height: 240px;
-　　　　margin-top: -120px;
-　　}
-
-使用同样的思路，也可以做出水平居中的效果。
-
-5. 图片宽度的自适应
-
-如何使得较大的图片，能够自动适应小容器的宽度？CSS可以这样写：
-
-　　img {max-width: 100%}
-
-但是IE6不支持max-width，所以遇到IE6时，使用IE条件注释，将语句改写为：
-
-　　img {width: 100%}
-
-6. 3D按钮
-
-要使按钮具有3D效果，只要将它的左上部边框设为浅色，右下部边框设为深色即可。
-
-　　div#button {
+```css
+　　button{
 　　　　background: #888;
 　　　　border: 1px solid;
 　　　　border-color: #999 #777 #777 #999;
 　　}
+```
 
-7. font属性的快捷写法
+# 背景颜色透明
 
-font快捷写法的格式为：
+```css
+    div
+    {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+```
 
-　　body {
-　　　　font: font-style font-variant font-weight font-size line-height font-family;
-　　}
+# font属性的快捷写法
 
-所以，
-
-　　body {
-　　　　font-family: Arial, Helvetica, sans-serif;
-　　　　font-size: 13px;
-　　　　font-weight: normal;
-　　　　font-variant: small-caps;
-　　　　font-style: italic;
-　　　　line-height: 150%;
-　　}
-
-可以被写成：
-
-　　body {
-　　　　font: italic small-caps normal 13px/150% Arial, Helvetica, sans-serif;
-　　}
-
-8. link状态的设置顺序
-
-link的四种状态，需要按照下面的前后顺序进行设置：
-
-　　a:link
-　　a:visited
-　　a:hover
-　　a:active
 
 14. font-size基准
 
@@ -130,21 +70,7 @@ Font Variant用于将字体变成小型的大写字母（即与小写字母等�
 
 　　p {font-variant: small-caps}
 
-16. CSS重置
 
-CSS重置用于取消浏览器的内置样式，请参考YUI和Eric Meyer的样式表。
-
-17. 用图片充当列表标志
-
-默认情况下，浏览器使用一个黑圆圈作为列表标志，可以用图片取代它：
-
-　　ul {list-style: none}
-
-　　ul li {
-　　　　background-image: url("path-to-your-image");
-　　　　background-repeat: none;
-　　　　background-position: 0 0.5em;
-　　}
 
 18. 透明
 
@@ -402,28 +328,4 @@ CSS代码如下：
 
 请参考3 Ways to Preload Images with CSS, JavaScript, or Ajax。
 
-32. CSS重置
-
-请参考Should You Reset Your CSS?。
-
-导航栏文本居中的方法
-#nav {
-    width: 80%;
-    height: auto;//高度设为自动，由子元素撑开
-    margin:0 auto ;
-    border-radius: 10px;
-    opacity: 0.6;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.nav_item {
-    width: 100px;
-    height: 30px;
-    line-height:30px;//通过line-height设置为item高来达到居中效果
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
+# CSS重置

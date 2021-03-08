@@ -2,7 +2,7 @@
 
 在url后添加参数即可。
 
-```
+```javascript
 $(document).ready(function autoSubmitSelect() {//表格选择后自动刷新
     $("#table_type_select").change(function () {
         var tableType = $("select option:selected").val();
