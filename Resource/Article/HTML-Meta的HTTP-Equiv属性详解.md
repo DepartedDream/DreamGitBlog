@@ -65,8 +65,8 @@
 * 设定进入页面时的特殊效果
  
 ```html
-<meta http-equiv="Page-Enter"    contect="revealTrans(duration=1.0,transtion=    12)">
-<meta http-equiv="Page-Exit"    contect="revealTrans(duration=1.0,transtion=    12)">    
+<meta http-equiv="Page-Enter"    contect="revealTrans(duration=1.0,transtion=12)">
+<meta http-equiv="Page-Exit"    contect="revealTrans(duration=1.0,transtion=12)">    
 ```
 
 # 设定离开页面时的特殊效果
@@ -74,6 +74,8 @@
 * Duration的值为网页动态过渡的时间，单位为秒。  
 * Transition是过渡方式，
 
+编号|效果
+--|--
 0|盒状收缩    
 1|盒状放射  
 2|圆形收缩   
