@@ -7,9 +7,9 @@ Microsoft Management Console(简称MMC)是微软管理控制台，顾名思义�
 命令|功能
 --|--
 mmc|打开msc控制台
-devmgmt.msc|设备管理器程序。
+devmgmt.msc|设备管理器程序
 dfrg.msc|磁盘碎片整理程序
-compmgmt.msc|计算机管理程序，
+compmgmt.msc|计算机管理程序
 diskmgmt.msc|磁盘管理程序
 gpedit.msc|组策略
 certmgr.msc|证书服务 

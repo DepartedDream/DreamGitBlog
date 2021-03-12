@@ -45,7 +45,7 @@ $(document).ready(function () {
         var tableType = $("select option:selected").val();
         form = $("<form method='post' action='AdminDelete.ashx?tableType='"+tableType+"'></form>");
         //设置第一个post值
-        input1 = $("<input type='hidden'  name='id' >");
+        input1 = $("<input type='hidden' name='id'>");
         var id = $(firstTrDOM).text();
         input1.val(id);
         //添加到表单

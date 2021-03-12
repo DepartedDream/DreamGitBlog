@@ -88,8 +88,8 @@
 # Web服务
 
 * Web服务是创建各种分布式应用程序的新方式
-,使用Web服务能够通过Internet虚拟交换数据.高级功能还能够创建WCF(Windows Communication Foundation)服务.
-
+* 使用Web服务能够通过Internet虚拟交换数据
+* 高级功能还能够创建WCF(Windows Communication Foundation)服务
 
 # 参考
 

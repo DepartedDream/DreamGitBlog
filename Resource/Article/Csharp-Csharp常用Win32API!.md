@@ -78,7 +78,7 @@ public static Bitmap GetWindowCapture(IntPtr hWnd)
     DeleteDC(hmemdc);//删除用过的对象
     return bmp;
 }
-```csharp
+```
 
 
 ```csharp
