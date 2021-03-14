@@ -39,8 +39,20 @@
 
 # 视频作为背景图片的方法
 
-```css
+* object-fit使得视频能够自动拉伸并覆盖全部窗体
+* object-position使得视频中心位置始终在窗体中心
 
+```css
+#background
+{
+    position: fixed;
+    display: block;
+    z-index: -100;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
 ```
 
 # 3D按钮

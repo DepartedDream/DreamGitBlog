@@ -2,7 +2,7 @@
     this.defaultVolume = 0.5;//默认音量
     this.defaultMusicName = "mizuki - ViEW";//默认播放的第一首歌曲
     this.defaultPlayState = "pause";//默认播放状态
-    this.defalutPlayOrder = "single";//默认播放顺序
+    this.defalutPlayOrder = "random";//默认播放顺序
     this.playerJqObj =function(){return $("#ddMusicPlayer");};
     this.lyric= function(){return $("#lyric");};
     this.bgm=function(){return $("#bgm");};
