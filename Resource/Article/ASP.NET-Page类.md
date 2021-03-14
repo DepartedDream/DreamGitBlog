@@ -6,6 +6,6 @@
 
 ## 成员
 
-### Session获取该页面的HttpSessionState对象
-### Response获取该页面的HttpResponse对象
-### Request获取该页面的HttpRequest对象
+* Session获取该页面的HttpSessionState对象
+* Response获取该页面的HttpResponse对象
+* Request获取该页面的HttpRequest对象
