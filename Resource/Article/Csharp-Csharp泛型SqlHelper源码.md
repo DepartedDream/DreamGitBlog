@@ -8,6 +8,8 @@ using System.Data.SqlClient;
 using System.Reflection;
 using ExceptionHandle;
 
+
+//Version=1.0
 namespace DAL
 {
     public static class SqlHelper<T>
