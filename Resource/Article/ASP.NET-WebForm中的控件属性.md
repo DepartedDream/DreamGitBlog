@@ -1,3 +1,7 @@
+# runat="server"属性
+
+* runat="server"将元素变为服务器控件
+
 # ClientIDMode属性的四个值
 
 * AutoID(默认)：该控件的ClientID 值是通过串联每个祖先容器控件的ID和父容器控件的ID和其本身的ID 值生成的
