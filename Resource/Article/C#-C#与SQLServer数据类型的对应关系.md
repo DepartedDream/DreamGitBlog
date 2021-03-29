@@ -1,4 +1,4 @@
-# sql与Csharp的数据类型
+# SQLServer与C#的数据类型
 
 | SQLServer        | Csharp   |
 | ---------------- | -------- |

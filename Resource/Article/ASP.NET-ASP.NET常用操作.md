@@ -175,7 +175,7 @@ namespace Test
             adminCookie1.Expires = DateTime.Now.AddDays(10);
             Response.Cookies.Add(adminCookie1);
             //显示单值Cookie
-            Response.Write($"单值{Response.Cookies["adminPwd"].Value}<br>");
+            Response.Write($"单值{Request.Cookies["adminPwd"].Value}<br>");
             //定义多值Cookie
             HttpCookie adminCookie2 = new HttpCookie("admin");
             adminCookie2["adminName"] = "Admin";
@@ -184,7 +184,7 @@ namespace Test
             Response.Cookies.Add(adminCookie2);
             //显示多值Cookie
             Response.Write("多值");
-            HttpCookie httpCookie = Response.Cookies["admin"];
+            HttpCookie httpCookie = Request.Cookies["admin"];
             foreach (string subKey in httpCookie.Values.AllKeys)
             {
                 Response.Write(httpCookie.Values[subKey]);
@@ -198,6 +198,7 @@ namespace Test
 
 * session数据存储在在服务器内存
 * session数据的范围是整个应用程序
+* session数据与用户相对应，每个用户的值并不相同
 
 ```csharp
 using System;

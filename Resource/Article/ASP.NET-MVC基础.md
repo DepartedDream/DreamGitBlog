@@ -115,7 +115,7 @@ namespace WebApp
 <label for="label1">你好</label>
 ```
 
-## Html.DropDownList--仅允许单选<select>
+## Html.DropDownList--仅允许单选Select
 
 ```csharp
 @{ 
@@ -135,7 +135,7 @@ namespace WebApp
 　　</select>
 ```
 
-## Html.ListBox--允许多选的<select>
+## Html.ListBox--允许多选的select
 
 ```csharp
  @{ 
@@ -148,6 +148,7 @@ namespace WebApp
 ```
 
 ```html
+<!-- 生成的HTML代码 -->
 <select id="state" multiple="multiple" name="state">
     <option selected="selected" value="0">启用</option>
     <option value="1">禁用</option>
@@ -156,42 +157,65 @@ namespace WebApp
 
 ## Html.Hidden--input隐藏域标签
 
+```csharp
 //视图代码
 @Html.Hidden("hidden1","我是一个隐藏域",new{});
-//输出到浏览器的HTML代码
+```
+
+```html
+<!-- 生成的HTML代码 -->
 <input id="hidden1" name="hidden1" type="hidden" value="我是一个隐藏域" />;
+```
 
 ## Html.Password--input密码标签
 
+```csharp
 //视图代码
 @Html.Password("password1", 123321, new { @class="class1" })
-//生成的HTML代码为
+```
+
+```html
+<!-- 生成的HTML代码 -->
 <input class="class1" id="password1" name="password1" type="password" value="123321" />
+```
 
 ## Html.RadioButton--input单选按钮标签
 
+```csharp
 //视图代码
 @Html.RadioButton("radio1",1,false)
 @Html.RadioButton("radio1",2,false)
 @Html.RadioButton("radio1",3,true)
-//生成的HTML代码为
+```
+
+```html
+<!-- 生成的HTML代码 -->
 <input id="radio1" name="radio1" type="radio" value="1" />
 <input id="radio1" name="radio1" type="radio" value="2" />
 <input checked="checked" id="radio1" name="radio1" type="radio" value="3" />
+```
 
-## Html.CheckBox--<input type="checkbox" />
+## Html.CheckBox
 
+```csharp
 //视图代码
 男人：@Html.CheckBox("check1", true, new { });
 女人：@Html.CheckBox("check1", false, new { });
 其它：@Html.CheckBox("check1", false, new { });
-//生成的HTML代码为：
+```
+
+```html
+<!-- 生成的HTML代码 -->
 男人：<input checked="checked" id="check1" name="check1" type="checkbox" value="true" /><input name="check1" type="hidden" value="false" />;
 女人：<input id="check1" name="check1" type="checkbox" value="true" /><input name="check1" type="hidden" value="false" />;
 其它：<input id="check1" name="check1" type="checkbox" value="true" /><input name="check1" type="hidden" value="false" />;
+```
 
-## Html.ActionLink--<a>
+## Html.ActionLink
 
 @Html.ActionLink("列表页", "list")
-//生成的HTML代码
+
+```html
+<!-- 生成的HTML代码 -->
 <a href="/Home/list">列表页</a>
+```

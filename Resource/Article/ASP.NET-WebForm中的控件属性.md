@@ -1,4 +1,4 @@
-# runat="server"属性
+# runat属性
 
 * runat="server"将元素变为服务器控件
 

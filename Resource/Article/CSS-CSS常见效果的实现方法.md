@@ -92,7 +92,7 @@
 ```css
     div
     {
-        box-shadow: box-shadow: offset-x offset-y blur spread color inset;
+        box-shadow: offset-x offset-y blur spread color inset;
     }
 ```
 
@@ -134,3 +134,48 @@
         top: 0; right: 0; bottom: 0; left: 0; 
     }
 ```
+
+# 透明背景模糊
+
+```css
+    .button
+    {
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+```
+
+# 表单元素的占位文本样式设置
+
+···css
+    .textbox::-webkit-input-placeholder
+    {
+        color:white;
+    }
+···
+
+# CSS英语单词换行
+
+* 默认状态html标记内的整串英语单词是不会换行的
+* 设置css属性word-break:break-all即可
+
+以下为CSS属性word-break的说明
+
+值|描述
+normal|使用浏览器默认的换行规则。
+break-all|允许在单词内换行。
+keep-all|只能在半角空格或连字符处换行。
+
+# Button样式
+
+
+* CSS按钮在线生成工具
+
+[best css button generator](https://www.bestcssbuttongenerator.com/)
+[CSS Button Generator](https://css3buttongenerator.com/)
+[CSS-Tricks Example](https://css-tricks.com/examples/ButtonMaker/)
+[CSS Settings](http://www.cssdrive.com/css3button/)
+[Button Generator](https://www.cssbuttongenerator.com/)
+[CSS Portal](https://www.cssportal.com/css3-button-generator/)
+[Buttons](https://unicorn-ui.com/buttons/builder/)
+[Sassy Buttons](http://jaredhardy.com/sassy-buttons/)

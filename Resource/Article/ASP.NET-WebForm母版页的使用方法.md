@@ -18,7 +18,7 @@
 <%@ Page Title="" Language="C#" MasterPageFile="母版页路径" AutoEventWireup="true" CodeBehind="AdminInfoManage.aspx.cs" Inherits="UI.Role.Admin.AdminInfoManage" %>
 ```
 
-* 在标记页面插入与母版页对应的asp:Content元素
+* 在标记页面插入与母版页对应的asp:Content元素并添加id
 
 ```
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">

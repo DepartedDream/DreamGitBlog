@@ -1,10 +1,17 @@
 # Pascal 规则
+
 每个单词开头的字母大写(如 TestCounter).
+
 # Camel 规则
+
 除了第一个单词外的其他单词的开头字母大写(如testCounter).
+
 # Upper 规则
+
 仅用于一两个字符长的常量的缩写命名,超过三个字符长度应该应用Pascal规则(如 IE).
+
 # bool 加is 例:isEditMode
+
 * 字段\参数(camel式)尽量不要使用缩写
 * 命名空间(Pascal 式)
 * 属性(camel式)用名词或名词短语命名属性
@@ -18,6 +25,7 @@ sender参数代表提出事件的对象，sender参数永远是一个类型对�
 * 方法(Pascal式)用动词或动词短语命名方法类命名指导
  
 # 类命名规则
+
 * 类名应该为名词及名词短语，尽可能使用完整的词.
 * 使用Pascal规则
 * 不要使用类前缀 - 不要使用下划线字符 (_)。
@@ -90,6 +98,7 @@ public class AuthorAttribute : Attribute
 public class AppException : Exception
 {
 }
+
 # 其它常用的编码规则
 
 * 代码的缩进。要用Tab，而不要用space.

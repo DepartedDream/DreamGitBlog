@@ -1,8 +1,21 @@
-# 修改项目路径的方法 
+# Visual Studio的常用快捷键
 
-* 卸载项目
-* 修改项目路径
-* 重新加载项目
+| 作用               | 快捷键        |
+| ------------------ | ------------- |
+| 格式化代码         | Ctrl+K+D      |
+| 注释选中行         | Ctrl+K,Ctrl+C |
+| 取消对选中行的注释 | Ctrl+K,Ctrl+U |
+
+# Visul Studio项目路径修改的方法
+
+* 首先要关闭Visul Studio
+* 之后找到项目路径，手动修改
+* 打开解决方案，项目会无法找到
+* 重新手动导入项目
+
+* 解决方案的名称可以随意更改
+* 整个解决方案的文件夹也可以随意修改
+* 修改项目名项目文件名并不会改变
 
 # Net Core和Net Framework解决方案资源管理器的区别
 
@@ -36,3 +49,12 @@ VisualStduio向解决方案管理器中拖拽文件是复制文件
 # Visual Studio快速将多行合并一行
 
 * 编辑->高级->联接行
+
+# Visual Studio的NuGet 简介
+
+* 对于 .NET（包括 .NET Core），共享代码的 Microsoft 支持的机制则为 NuGet 
+* NuGet其定义如何创建、托管和使用面向 .NET 的包，并针对每个角色提供适用工具。
+* NuGet 包是具有 .nupkg 扩展的单个 ZIP 文件，此扩展包含编译代码 (Dll)、与该代码相关的其他文件以及描述性清单（包含包版本号等信息）。
+
+# 参考
+[微软NuGet 简介](https://docs.microsoft.com/zh-cn/nuget/what-is-nuget#comments-contributions-and-issues)

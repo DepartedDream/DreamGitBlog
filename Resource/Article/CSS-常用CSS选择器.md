@@ -19,6 +19,9 @@
 | :hover                 | a:hover          | 选择鼠标在链接上面时                            |
 | :nth-child(n)          | p:nth-child(2)   | 选择每个p元素是其父级的第二个子元素             |
 
+
+* 如果html元素的名字中包含空格要用.代替
+
 # 参考
 
 [CSS选择器](https://www.runoob.com/cssref/css-selectors.html)
