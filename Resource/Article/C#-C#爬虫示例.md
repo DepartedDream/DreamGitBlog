@@ -1,4 +1,4 @@
-# 
+# C#爬虫示例
 
 ```csharp
         public static string GetUrltoHtml(string Url, Encoding encode)

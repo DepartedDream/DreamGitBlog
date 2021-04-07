@@ -4,7 +4,7 @@ autocomplete="off"
 
 # 关闭文本框拼写检查功能
 
-spellcheck="d"
+spellcheck="false"
 
 # 文本框提示
 

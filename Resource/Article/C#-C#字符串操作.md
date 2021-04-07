@@ -1,4 +1,7 @@
-# String.Format--格式化字符串
+# 字符串方法
+
+## String.Format--格式化字符串
+
 ```csharp
 using System;
 
@@ -22,7 +25,7 @@ My name is Jack
 My name is Jack
 ```
 
-# string.Contains--查询字符串中是否包含指定字符串
+## string.Contains--查询字符串中是否包含指定字符串
 
 ```csharp
 using System;
@@ -52,7 +55,7 @@ namespace Test
 There is a key
 ```
 
-# string.IndexOf--获取指定字符的索引
+## string.IndexOf--获取指定字符的索引
 
 ```csharp
 using System;
@@ -77,7 +80,7 @@ namespace Test
 3
 ```
 
-# string.IndexOfAny--获取指定字符数组中第一个出现的字符的索引
+## string.IndexOfAny--获取指定字符数组中第一个出现的字符的索引
 
 ```csharp
 using System;
@@ -101,7 +104,7 @@ namespace Test
 3
 ```
 
-# String.Join--将一个字符串数组整合为一个字符串
+## String.Join--将一个字符串数组整合为一个字符串
 
 ```csharp
 using System;
@@ -125,7 +128,7 @@ namespace Test
 apple-banana-pear-peach
 ```
 
-# string.PadLeft--从左侧位置填充字符串到指定长度
+## string.PadLeft--从左侧位置填充字符串到指定长度
 
 ```csharp
 using System;
@@ -149,7 +152,7 @@ namespace Test
 0123456789
 ```
 
-# string.PadRight--从右侧位置填充字符串到指定长度
+## string.PadRight--从右侧位置填充字符串到指定长度
 
 ```csharp
 using System;
@@ -173,7 +176,7 @@ namespace Test
 0      789
 ```
 
-# string.Remove--移除从指定位置指定的字符串
+## string.Remove--移除从指定位置指定的字符串
 
 ```csharp
 using System;
@@ -196,7 +199,7 @@ namespace Test
  World!
 ```
 
-# string.Replace--将字符串中的指定字符串替换为新的字符串
+## string.Replace--将字符串中的指定字符串替换为新的字符串
 
 ```csharp
 using System;
@@ -221,7 +224,7 @@ namespace Test
 Hello Jack!
 ```
 
-# string.SubString--保留从指定位置开始的字符串
+## string.SubString--保留从指定位置开始的字符串
 
 ```csharp
 using System;
@@ -244,7 +247,7 @@ namespace Test
 World!
 ```
 
-# string.Split--将字符串拆分成字符数组
+## string.Split--将字符串拆分成字符数组
 
 ```csharp
 using System;
@@ -273,7 +276,7 @@ banaa
 pear
 ```
 
-# string.ToCharArray--将字符串拆分成字符数组
+## string.ToCharArray--将字符串拆分成字符数组
 
 ```csharp
 using System;
@@ -303,7 +306,7 @@ b
 c
 ```
 
-# string.Trim--去除掉字符串开头和结尾的指定字符
+## string.Trim--去除掉字符串开头和结尾的指定字符
 
 ```csharp
 using System;
@@ -327,7 +330,7 @@ asd
 ```
 
 
-# string.TrmStart--去除字符串开头的指定字符
+## string.TrmStart--去除字符串开头的指定字符
 
 ```csharp
 using System;
@@ -350,7 +353,7 @@ namespace Test
 asd111
 ```
 
-# string.TrmEnd--去除字符串结尾的指定字符
+## string.TrmEnd--去除字符串结尾的指定字符
 
 ```csharp
 using System;
@@ -373,7 +376,7 @@ namespace Test
 111asd
 ```
 
-# string.ToLower--将字符串中的所有大写英文字符转换为小写
+## string.ToLower--将字符串中的所有大写英文字符转换为小写
 
 ```csharp
 using System;
@@ -397,7 +400,7 @@ namespace Test
 abcdefghij
 ```
 
-# string.ToUpper--将字符串中的所有小写英文字符转换为大写
+## string.ToUpper--将字符串中的所有小写英文字符转换为大写
 
 ```csharp
 using System;
@@ -419,4 +422,35 @@ namespace Test
 
 ```
 ABCDEFGHIJ
+```
+
+
+# 字符串内插
+
+* 字符串内插通过使用“模板”和一个/多个内插表达式将多个值合并为单个文本字符串
+* 内插表达式是一个变量，由一个左大括号和一个右大括号符号 { } 括起来。 
+* 当文本字符串以 $ 字符为前缀时，该字符串将变为字符串模板。
+
+```csharp
+string message = greeting + " " + firstName + "!";
+string message = $"{greeting} {firstName}!";
+```
+
+## 字符串内插中使用格式化字符串
+
+* N3小数点后3位
+* C显示所在地区的货币符号
+* P2百分数后两位
+
+```csharp
+Console.WriteLine($"Invoice Number: {invoiceNumber}");
+Console.WriteLine($"Measurement: {productMeasurement:N3} mg");
+Console.WriteLine($"Sub Total: {subtotal:C}");
+Console.WriteLine($"Tax: {taxPercentage:P2}");
+Console.WriteLine($"Total Due: {total:C}");
+//Invoice Number: 1201
+//Measurement: 25.457 mg
+//Sub Total: ¤2,750.00
+//Tax: 15.83 %
+//otal Due: ¤3,185.19
 ```
