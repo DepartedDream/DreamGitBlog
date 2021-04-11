@@ -45,46 +45,15 @@ function functionname(x,y)
 * 注意JavaScript对大小写敏感。
 * javaScript是弱类型语言，不用定义数据类型
 
-# JavaScript对象
-
-## JavaScript定义对象
-
-```javascript
-var person = {
-    firstName: "John",
-    lastName : "Doe",
-    id : 5566,
-    fullName : function() 
-	{
-       return this.firstName + " " + this.lastName;
-    }
-}
-```
-## JavaScript定义数组
+## JavaScript数组
 
 ```javascript
 var myCars=new Array();
 myCars[0]="Saab";      
 myCars[1]="Volvo";
 myCars[2]="BMW";
-```
-```javascript
 var myCars=new Array("Saab","Volvo","BMW");
-```
-```javascript
 var myCars=["Saab","Volvo","BMW"];
-```
-
-## JavaScript访问对像属性
-
-```javascript
-person["lastName"];
-```
-
-## JavaScript访问对象方法
-
-```javascript
-person.fullName();
 ```
 
 # JavaScript流程控制语句

@@ -39,4 +39,4 @@ function initialTable(typeName, groupNum, tHeadArray) {
 tBody的值
 ```
 
-由于ajax默认为异步执行，ajax的方法执行时，其后面的方法不会等待该函数执行完毕，而是会立刻执行。
+* 由于ajax默认为异步执行，ajax的方法执行时，其后面的方法不会等待该函数执行完毕，而是会立刻执行。
