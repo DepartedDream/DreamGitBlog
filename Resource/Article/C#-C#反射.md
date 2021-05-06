@@ -50,6 +50,19 @@ for (int x = 0; x < propArray.Length; x++)
 Type type=typeof(Student);
 object student = Activator.CreateInstance(type);
 
+//获取属性值
+PropertyInfo propertyInfo=type.GetProperty("name");
+propertyInfo.GetValue(student,null);
+
+//获取字段值
+
+PropertyInfo propertyInfo=type.GetProperty("Name");
+propertyInfo.GetValue(student,null);
+
+//调用方法
+MethodInfo methodInfo=student.GetMethod("Study");
+methodInfo.Invoke(student,null);
+
 //给字段赋值
 Field filed=t.GetFiled("name");
 filed.SetValue(student,"asd",null)
@@ -57,10 +70,6 @@ filed.SetValue(student,"asd",null)
 //给属性赋值
 PropertyInfo propertyInfo=type.GetProperty("Name");
 propertyInfo.SetValue(student,"asd",null);
-
-//调用方法
-MethodInfo methodInfo=student.GetMethod("Study");
-methodInfo.Invoke(student,null);
 ```
 
 # 实例化指定名称程序集中的类

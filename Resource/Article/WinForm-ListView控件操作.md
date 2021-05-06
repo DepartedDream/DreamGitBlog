@@ -1,7 +1,7 @@
 * 更改listView的属性View为Details
 * 更改listView的属性GridLines为True
 * 更改listView的属性FullRowSelect为True
-
+* 更改listView的属性ShowGroup为False
 ```csharp
 using System;
 using System.Collections.Generic;
