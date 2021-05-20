@@ -69,45 +69,6 @@ namespace Test
     }
 }
 ```
-
-
-# 将对象写入http响应流
-
-```csharp
-using System;
-using System.Web;
-
-namespace Test
-{
-    public partial class Test : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Write("HelloWorld");
-        }
-    }
-}
-```
-
-# 重定向到指定的URL
-
-```csharp
-using System;
-using System.Web;
-
-namespace Test
-{
-    public partial class Test : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Redirect("www.baidu.com");
-        }
-    }
-}
-```
-
-
 # ViewState对象操作示例
 
 * ViewState数据只能保存在当前页面
@@ -249,6 +210,44 @@ namespace Test
     }
 }
 ```
+
+
+# 将对象写入http响应流
+
+```csharp
+using System;
+using System.Web;
+
+namespace Test
+{
+    public partial class Test : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Write("HelloWorld");
+        }
+    }
+}
+```
+
+# 重定向到指定的URL
+
+```csharp
+using System;
+using System.Web;
+
+namespace Test
+{
+    public partial class Test : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Redirect("www.baidu.com");
+        }
+    }
+}
+```
+
 
 # Server.Tranfer传值
 
