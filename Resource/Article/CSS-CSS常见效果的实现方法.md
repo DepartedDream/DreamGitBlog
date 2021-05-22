@@ -25,35 +25,40 @@
 * bottom表示该元素距离窗体底部的距离
 
 ```css
-　　.div{
-　　　  position:fixed;
-        bottom:0;
-　　}
+.div
+{
+　  position:fixed;
+    bottom:0;
+}
 ```
 
-# 图片宽度的自适应
+# 设置背景图片
 
 ```css
-
-```
-
-# 视频作为背景图片的方法
-
-* object-fit使得视频能够自动拉伸并覆盖全部窗体
-* object-position使得视频中心位置始终在窗体中心
-
-```css
-#background
+#background/*图片背景*/
 {
     position: fixed;
-    display: block;
-    z-index: -100;
     width: 100vw;
     height: 100vh;
+    z-index: -100;
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#background/*视频背景*/
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
     object-fit: cover;
     object-position: center;
 }
 ```
+
+* 背景图片的路径值是相对该css文件的相对路径
+* object-fit使得视频能够自动拉伸并覆盖全部窗体
+* object-position使得视频中心位置始终在窗体中心
 
 # 3D按钮
 
@@ -166,7 +171,7 @@ normal|使用浏览器默认的换行规则。
 break-all|允许在单词内换行。
 keep-all|只能在半角空格或连字符处换行。
 
-# Button样式
+# CSS的Button样式
 
 
 * CSS按钮在线生成工具
@@ -179,3 +184,12 @@ keep-all|只能在半角空格或连字符处换行。
 [CSS Portal](https://www.cssportal.com/css3-button-generator/)
 [Buttons](https://unicorn-ui.com/buttons/builder/)
 [Sassy Buttons](http://jaredhardy.com/sassy-buttons/)
+
+# CSS悬浮触发另一个样式
+
+```css
+#button1:hover>#button2
+{
+    background-color:yellow;
+}
+```

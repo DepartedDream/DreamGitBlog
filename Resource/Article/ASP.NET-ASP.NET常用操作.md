@@ -1,4 +1,4 @@
-# 获取get提交的数据
+# 获取get提交的数据/获取查询字符串值
 
 ```html
 <!DOCTYPE html>
@@ -34,7 +34,10 @@ namespace Test
 }
 ```
 
-# 获取post提交的数据
+* 未声明的查询字符串值为null
+* 查询字符串值也可以通过url?parm1=123&parm2=123方法提交
+
+# 获取post提交的数据/获取form表单值
 
 ```html
 <!DOCTYPE html>
@@ -55,8 +58,6 @@ namespace Test
 ```
 
 ```csharp
-using System;
-
 namespace Test
 {
     public partial class Main : System.Web.UI.Page
@@ -69,6 +70,80 @@ namespace Test
     }
 }
 ```
+
+# 判断asp.net表单是否传回
+
+* IsPostBack生效前端必须包含服务器控件，也就是属性有runat=“server”的标记
+
+```csharp
+namespace Test
+{
+    public partial class Main : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (IsPostBack) 
+            {
+                Response.Write("表单提交成功");
+            }
+            else 
+            {
+                Response.Write("表单没有提交");
+            }
+        }
+    }
+}
+```
+
+# 判断post表单是否传回
+
+```csharp
+namespace Test
+{
+    public partial class Main : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.Form["username"]!=null) 
+            {
+                Response.Write("表单提交成功");
+            }
+            else 
+            {
+                Response.Write("表单没有提交");
+            }
+        }
+    }
+}
+```
+
+* Form表单的默认传回方法为get方法
+* 页面没有表单传回时，Form控件值均为null
+* 如果检测到Form控件值不为null，则表示表单进行了提交
+
+
+# 判断get表单是否传回
+
+```csharp
+namespace Test
+{
+    public partial class Main : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Request.Form["username"]!=null) 
+            {
+                Response.Write("表单提交成功");
+            }
+            else 
+            {
+                Response.Write("表单没有提交");
+            }
+        }
+    }
+}
+```
+
 # ViewState对象操作示例
 
 * ViewState数据只能保存在当前页面
@@ -150,6 +225,10 @@ namespace Test
             {
                 Response.Write(httpCookie.Values[subKey]);
             }
+            //删除Cookie
+            HttpCookie adminCookie3 = new HttpCookie("adminPwd", "123");
+            adminCookie3.Expires = DateTime.Now.AddDays(-10);
+            Response.Cookies.Add(adminCookie3);
         }
     }
 }
@@ -248,6 +327,21 @@ namespace Test
 }
 ```
 
+# 重定向到上次请求的url
+
+```csharp
+using System;
+namespace Test
+{
+    public partial class Main : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Response.Redirect(Request.UrlReferrer.AbsoluteUri);
+        }
+    }
+}
+```
 
 # Server.Tranfer传值
 
@@ -386,27 +480,3 @@ namespace Test
 }
 ```
 
-# 判断页面是否是首次加载
-
-* IsPostBack属性只有标有runat=“server”的标签回传才会为True
-
-```csharp
-using System;
-namespace Test
-{
-    public partial class Main : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
-            {
-                Response.Write("首次加载");
-            }
-            else 
-            {
-                Response.Write("回发");
-            }
-        }
-    }
-}
-```
