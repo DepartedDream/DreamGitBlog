@@ -13,8 +13,9 @@
 
 ## 整形值类型
 
-* 有符号整形值类型取值范围排序:sbyte < int < short < long
-* 无符号整形值类型取值范围排序:byte < uint < ushort < ulong
+* 整形类型的主要区别为它们的取值范围不同
+* 有符号整形值类型取值范围排序:sbyte < short < int < long
+* 无符号整形值类型取值范围排序:byte < ushort < uint < ulong
 
 ## 枚举类型
 
@@ -103,13 +104,18 @@ Console.WriteLine((int)Days.Monday);
 
 ## 浮点型值类型
 
-* 浮点型值类型型取值范围排序float < double < decimal
+* [浮点数值类型微软文档](https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types)
+* 数字文本的数据类型尤其后缀确定，
+* 数字文本为整数的数据类型为int型
+* 数字文本不带后缀或带有 d 或 D 类型为 double
+* 数字文本带有 f 或 F 类型为 float
+* 数字文本带有 m 或 M 类型为 decimal
+* 数字文本可以用 _ 作为数字分隔符，例12.3412_1234
+* 数字文本可以使用科学计数法，例0.42e2、134.45E-2f
 * float和double采用二进制进行存储，在计算时可能出现较小的误差
 * decimal采用十进制存储，计算精准，但会占用较多内存
-* float定义时数字后要加f,double加d,decimal加m
-* 整数不加后缀默认数据类型为int
-* 小数不加后缀默认数据类型为double
 * 在进行数值计算时，计算结果的数据类型与精度高的变量相同
+* 浮点型值类型型取值范围排序float < double < decimal
 
 ## 结构类型/自定义值类型
 

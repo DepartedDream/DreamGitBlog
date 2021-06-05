@@ -71,6 +71,7 @@ namespace TestConsole
     }
 }
 ```
+
 * 声明为 implicit 的转换在需要时自动进行
 * 声明为 explicit 的转换需要调用强制转换
 * 所有转换都必须声明为 static

@@ -1,35 +1,37 @@
+# .NET
+
+* .NET是微软创建的一个开发者平台，它包括开发环境、技术框架、社区论坛、服务支持等。
+* .NET平台拥有跨语言性和跨平台性
+* .NET的跨语言性:面向.NET平台的编程语言能够相互操作
+* .NET的跨平台性：一次编译，应用程序就可以运行在任意.NET框架支持的平台上
+* 微软为.NET开发了C#编程语言
+* 微软推出的.NET开发工具为Visual Studio。
+
+# CLS CTS CLI
+
+* CLS全称Common language specification(公共语言规范)
+* CLS是面向.NET开发中，编写跨语言组件时所遵循的那些共性
+
+* CTS全称Common Type System(公共类型系统)
+* CTS是所有面向.NET的高级语言时，都要遵循的规范就是CTS
+* CTS的要求任何面向.NET的语言都要满足，但不必实现CTS中所有的标准与规定
+
+* CLI全称Common Language Infrastructure(公共语言基础)
+* CLI是微软将CTS等内容提交给国际组织计算机制造联合会ECMA的后生成的一个工业标准
+
+* CTS包含CLS,CTS+
+
+# FCL BCL
+
+* FCL全称Framework Class Library(框架类库)
+* FCL即所有由微软开发的类库
+* BCL全称Base Class Library(基础类库)
+* BCL即包含.NET开发基本功能的FCL。
+
 # .NET Framework
 
 * .NET Framework为微软的一个应用程序开发平台
 * 它包括公共语言运行时（Common Language Runtime, CLR）虚拟执行系统和 .NET Framework 类库。
-
-# CLS（common language specification）公共语言规范
-
-# CLI
-
-* CLI全称（common language infrastructure）：公共语言基础。
-* CLI是一个国际标准
-* .net框架只是CLI的一个具体实现
-
-# CTS
-
-* CTS全称（common type system）公共类型系统
-* 当自己要设计一种面向.net的高级语言时，都要遵循的规范就是CTS
-* 任何面向.net的语言都要满足CTS的要求，但不必实现CTS中所有的标准与规定
-* 语言本身不能有违背CTS的地方。这样的语言编译后生成CIL。
-
-# FCL
-
-* FCL全称（Framework Class Library）框架类库
-* BCL即基类库,是FCL的一个子集，包含了所有的基础类库。
-* FCL中包含了.NET各种框架所应用到类库
-
-# CLR
-
-* CLR全称Common Language Runtime/公共语言运行时
-* CLR可以根据目标计算机上的信息，将CIL编译成可以执行的程序
-* CLR是一套完整的、高级的虚拟机
-* 部分语言在JIT编译后还需要CLR进行托管，例如C#，C++则不用
 
 # JIT
 
@@ -93,5 +95,5 @@
 
 # 参考
 
-[C#简单介绍及托管代码](https://blog.csdn.net/weixin_30376163/article/details/99113330)
-[https://zhuanlan.zhihu.com/p/68158037]()
+* [C#简单介绍及托管代码](https://blog.csdn.net/weixin_30376163/article/details/99113330)
+* [通俗易懂，什么是.NET?什么是.NET Framework？什么是.NET Core?](https://www.cnblogs.com/1996V/p/9037603.html)
