@@ -1,6 +1,6 @@
 # C#字符编码
 
-* 将中文字符转化为Unicode字符编码，字符编码的每字节使用1个数字表示
+* 将中文字符转化为Unicode字节序列
 
 ```csharp
 using System;
@@ -30,7 +30,7 @@ namespace TestConsole
 
 # C#字符解码
 
-* 将Unicode字符编码转化为中文字符，
+* 将Unicode字节序列转化为中文字符，
 
 ```csharp
 namespace TestConsole
@@ -54,3 +54,4 @@ namespace TestConsole
 # 参考
 
 [.NET 支持的编码](https://docs.microsoft.com/zh-cn/dotnet/api/system.text.encoding?view=net-5.0#list-of-encodings)
+[如何在 .NET 中使用字符编码类](https://docs.microsoft.com/zh-cn/dotnet/standard/base-types/character-encoding)
