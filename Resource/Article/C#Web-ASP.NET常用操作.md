@@ -135,7 +135,7 @@ namespace Test
             {
                 Response.Write("表单提交成功");
             }
-            else 
+            else
             {
                 Response.Write("表单没有提交");
             }
@@ -327,22 +327,6 @@ namespace Test
 }
 ```
 
-# 重定向到上次请求的url
-
-```csharp
-using System;
-namespace Test
-{
-    public partial class Main : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Redirect(Request.UrlReferrer.AbsoluteUri);
-        }
-    }
-}
-```
-
 # Server.Tranfer传值
 
 * Server.Tranfer通过属性设置会保存当前页面的提交的表单值和查询字符串值
@@ -425,58 +409,3 @@ namespace Test
     }
 }
 ```
-
-# 查看客户端的IP地址 
-
-```csharp
-using System;
-using System.Web;
-
-namespace Test
-{
-    public partial class Main : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Write(Request.ServerVariables["REMOTE_ADDR"].ToString())
-        }
-    }
-}
-```
-         
-# 查看客户端的端口号 
-
-```csharp
-using System;
-using System.Web;
-
-namespace Test
-{
-    public partial class Main : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Write(Request.ServerVariables["REMOTE_PORT"].ToString())
-        }
-    }
-}
-```
-
-# 获取Web程序的根目录
-
-```csharp
-using System;
-using System.Web;
-
-namespace Test
-{
-    public partial class Main : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            Response.Write(HttpRuntime.AppDomainAppPath);
-        }
-    }
-}
-```
-

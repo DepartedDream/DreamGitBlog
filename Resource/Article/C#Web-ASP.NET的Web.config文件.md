@@ -22,7 +22,7 @@ appSettings节点主要用来存储asp.net应用程序的一些配置信息，�
 对于appSettings节点中的值可以按照key来进行访问，以下就是C#一个读取key值为“FileType”节点值的例子：
 
 ```csharp
-string fileType=ConfigurationManager.AppSettings["FileType "];
+string fileType=ConfigurationManager.AppSettings["FileType"];
 ```
 
 ### connectionStrings
