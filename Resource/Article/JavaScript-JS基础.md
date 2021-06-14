@@ -2,34 +2,28 @@
 
 JavaScript是弱类型的客户端端脚本语言
 
-# JavaScript基本语法
+# JavaScript引入JS
 
-html中写入JavaScript脚本
-```javascript
-<script/>JavaScript代码</script>
+```html
+<!--html中写入JavaScript脚本-->
+<script>JavaScript代码</script>
+<!-- 引入外部js文件 -->
+<script src="myScript.js" type="text/javascript"></script>
 ```
 
-引入外部js文件
-```javascript
-<script src="myScript.js"></script>
-```
-
-* 注意:那些老旧的实例可能会在script标签中使用 type="text/javascript"。现在已经不必这样做了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。
 * script标签可以写在html文件的任何地方
 
 # JavaScript注释
 
 ```javascript
 //单行注释
-
 /*多行注释
-多行注释
 多行注释*/
 ```
 
 # JavaScript定义变量
 
-```
+```javascript
 var a;
 ```
 
@@ -38,23 +32,12 @@ var a;
 ```javascript
 function functionname(x,y)
 {
-    // 执行代码
+    //执行代码
 }
 ```
 
 * 注意JavaScript对大小写敏感。
 * javaScript是弱类型语言，不用定义数据类型
-
-## JavaScript数组
-
-```javascript
-var myCars=new Array();
-myCars[0]="Saab";      
-myCars[1]="Volvo";
-myCars[2]="BMW";
-var myCars=new Array("Saab","Volvo","BMW");
-var myCars=["Saab","Volvo","BMW"];
-```
 
 # JavaScript流程控制语句
 

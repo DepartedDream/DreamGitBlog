@@ -11,3 +11,5 @@ var $box = $(box);
 var $box = $('#box');
 var box = $box[0];
 ```
+
+* jQuery对象实际是一个dom对象数组

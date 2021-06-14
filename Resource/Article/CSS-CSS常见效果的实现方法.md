@@ -125,22 +125,6 @@
     }
 ```
 
-# CSS平行四边形的实现方法
-
-```css
-    .button 
-    {
-        position: relative;
-    }
-
-    .button::before 
-    {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0; 
-    }
-```
-
 # 透明背景模糊
 
 ```css
@@ -174,7 +158,6 @@ keep-all|只能在半角空格或连字符处换行。
 
 # CSS的Button样式
 
-
 * CSS按钮在线生成工具
 
 [best css button generator](https://www.bestcssbuttongenerator.com/)
@@ -185,12 +168,3 @@ keep-all|只能在半角空格或连字符处换行。
 [CSS Portal](https://www.cssportal.com/css3-button-generator/)
 [Buttons](https://unicorn-ui.com/buttons/builder/)
 [Sassy Buttons](http://jaredhardy.com/sassy-buttons/)
-
-# CSS悬浮触发另一个样式
-
-```css
-#button1:hover>#button2
-{
-    background-color:yellow;
-}
-```
