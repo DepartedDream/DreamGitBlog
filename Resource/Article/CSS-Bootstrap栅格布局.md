@@ -47,25 +47,25 @@ d-none d-sm-block d-md-none|仅在小设备上显示
 # 对齐与排列
 ## 栅格对齐
 
-垂直样式(作用于行)
+属性|垂直样式(作用于行)
 --|--
-居顶(默认)|.align-items-start
-居中|.align-items-center
-居底|.align-items-end
+.align-items-start|居顶(默认)
+.align-items-center|居中
+.align-items-end|居底
 
-水平样式(作用于行)
+属性|水平样式(作用于行)
 --|--
-居左(默认)|.justify-content-start
-居中|.justify-content-center
-居右|.justify-content-end
-间隔相等(分散)|.justify-content-around
-间隔对齐(分散)|.justify-content-between
+.justify-content-start|居左(默认)
+.justify-content-center|居中
+.justify-content-end|居右
+.justify-content-around|间隔相等(分散)
+.justify-content-between|间隔对齐(分散)
 
-样式(作用于列)
+属性|样式(作用于列)
 --|--
-居顶(默认)|.align-self-start
-居中|.align-self-center
-居底|.align-self-end
+.align-self-start|居顶(默认)
+.align-self-center|居中
+.align-self-end|居底
 
 ## 栅格排列
 
