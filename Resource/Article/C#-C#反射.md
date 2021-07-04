@@ -94,6 +94,35 @@ Assembly assembly=assmebly.GetExecutingAssembly();
 object obj=assembly.CreateInstance("Reflection.MainClass");
 ```
 
+# 获取程序版本号的方法
+
+```csharp
+class Program
+{
+    static void Main(string[] args)
+    {
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        AssemblyName assemblyName = assembly.GetName();
+        Version version = assemblyName.Version;
+        Console.WriteLine(assemblyName.FullName);
+        Console.WriteLine("Major   Version         =   " + version.Major);
+        Console.WriteLine("Minor   Version         =   " + version.Minor);
+        Console.WriteLine("Revision   Version   =   " + version.Revision);
+        Console.WriteLine("Build   Version         =   " + version.Build);
+        Console.ReadLine();
+    }
+}
+```
+
+# 获取当前方法名和类名
+```csharp
+string className=MethodBase.GetCurrentMethod().DeclaringType.Name;
+string methodName=MethodBase.GetCurrentMethod().Name;
+Console.WriteLine(className);
+Console.WriteLine(methodName);
+Console.ReadLine();
+```
+
 # 参考
 
 [C#反射机制](https://zhuanlan.zhihu.com/p/41282759)
