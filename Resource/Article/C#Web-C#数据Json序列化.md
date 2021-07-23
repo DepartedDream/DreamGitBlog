@@ -18,3 +18,9 @@ string Json = "{UserName:\"张三\"}";
 dynamic student = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(Json);
 string username = student.UserName;
 ```
+
+# json数据转化结果显示
+
+* 数组转化后为js数组
+* List转化后为js数组
+* 对象转化后为js对象
