@@ -7,6 +7,7 @@
 * System.IO.StreamWriter类专用于特定编码的字符输出
 * System.IO.StreamReader类专用于特定编码的字符读取
 * System.IO.FileStream类设计用于向文件以字节形式的输入和输出
+* System.IO.FileSystemWatcher
 
 # 注意事项
 
@@ -211,6 +212,30 @@ namespace TestConsole
             {
                 Console.WriteLine(sr.ReadLine()); 
             }
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+# 文件监视操作
+
+```C#
+namespace TestConsole
+{
+
+    static class Program
+    {
+        static void Main(string[] args)
+        {
+            FileSystemWatcher watcher=new FileSystemWatcher("D:\\");
+            watcher.Created+=(object sender,FileSystemEvent e)=>
+            {
+                Console.WriteLine($"{e.Name}文件被创建了")
+            };
+            watcher.EnableRaisingEvents=true;
+            File.Create("D:\\hello.txt").Dispose();
+            File.Delete("D:\\hello.txt")
             Console.ReadLine();
         }
     }

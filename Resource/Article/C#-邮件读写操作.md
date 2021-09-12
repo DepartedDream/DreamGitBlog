@@ -35,10 +35,7 @@ catch(SmtpException smtpError)
 
 * 以下代码采用pop3协议接收邮件
 
-
-
-
-```csharp
+```c#
 private void ReceiveForm_Load(object sender, EventArgs e)
 {
     try

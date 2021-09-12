@@ -32,29 +32,7 @@
 }
 ```
 
-# 设置背景图片
 
-```css
-#background/*图片背景*/
-{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: -100;
-    background-image: url(../../images/background.jpg);
-    background-size: cover;
-    background-position: center;
-}
-#background/*视频背景*/
-{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: -100;
-    object-fit: cover;
-    object-position: center;
-}
-```
 
 * url路径使用正斜杠/
 * 背景图片的路径值是相对该css文件的相对路径
