@@ -135,3 +135,23 @@ keep-all|只能在半角空格或连字符处换行。
 [CSS Portal](https://www.cssportal.com/css3-button-generator/)
 [Buttons](https://unicorn-ui.com/buttons/builder/)
 [Sassy Buttons](http://jaredhardy.com/sassy-buttons/)
+
+
+# CSS去除默认input的外边框
+
+```css
+outline: none;
+```
+
+# div溢出文字显示省略号
+
+* white-space属性用于设置如何处理空白
+* 默认所有空白(space,enter,tab均为一个空格)
+
+```
+.div{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+```
